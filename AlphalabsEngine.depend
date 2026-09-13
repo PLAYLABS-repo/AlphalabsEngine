@@ -1,0 +1,139 @@
+# depslib dependency file v1.0
+1789291728 source:c:\developmentfiles\alphalabsengine\startapp.cpp
+	"Engine/Src/Necessity.h"
+	<iostream>
+	"Engine/Src/Main/Image/ImgDecode.h"
+	"Engine/Src/Main/Image/ImgData.h"
+
+1788600051 source:c:\developmentfiles\alphalabsengine\client\shells\game\gameshell.c
+	<windows.h>
+	<EGL/egl.h>
+	<GLES2/gl2.h>
+
+1788770050 source:c:\developmentfiles\alphalabsengine\client\shells\win32\gameshell.cpp
+	"GameShell.h"
+	<string>
+
+1788769476 c:\developmentfiles\alphalabsengine\client\shells\win32\gameshell.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES2/gl2.h>
+
+1788953576 source:c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2renderer.cpp
+	"GLES2Renderer.h"
+
+1788953576 c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2renderer.h
+	<GLES2/gl2.h>
+
+1788954692 source:c:\developmentfiles\alphalabsengine\clients\shells\win32\gameshell.cpp
+	"GameShell.h"
+	<string>
+
+1788954080 c:\developmentfiles\alphalabsengine\clients\shells\win32\gameshell.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES2/gl2.h>
+
+1789287548 source:c:\developmentfiles\alphalabsengine\engine\src\main\file\file.cpp
+	"File.h"
+
+1789287580 c:\developmentfiles\alphalabsengine\engine\src\main\file\file.h
+	<fstream>
+	<vector>
+	<string>
+
+1788953576 source:c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2stencilfunctions.cpp
+	"GLES2StencilFunctions.h"
+
+1788953576 c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2render.h
+	<GLES2/gl2.h>
+
+1788953576 source:c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2render.cpp
+	"GLES2Render.h"
+
+1788953576 source:c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2framebuffer.cpp
+	"GLES2Framebuffer.h"
+
+1788953576 c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2framebuffer.h
+	<GLES2/gl2.h>
+
+1788953576 source:c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2attributes.cpp
+	"GLES2Attributes.h"
+
+1788953576 c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2attributes.h
+	<GLES2/gl2.h>
+
+1788953576 source:c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2buffer.cpp
+	"GLES2Buffer.h"
+
+1788953576 c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2buffer.h
+	<GLES2/gl2.h>
+
+1788953576 source:c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2textures.cpp
+	"GLES2Textures.h"
+
+1788953576 c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2textures.h
+	<GLES2/gl2.h>
+
+1788953576 source:c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2shaderprogram.cpp
+	"GLES2ShaderProgram.h"
+
+1788953576 c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2shaderprogram.h
+	<GLES2/gl2.h>
+
+1788953576 c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2stencilfunctions.h
+	<GLES2/gl2.h>
+
+1788953925 c:\developmentfiles\alphalabsengine\engine\src\gles2includes.h
+	"GLES2Render/GLES2Attributes.h"
+	"GLES2Render/GLES2Buffer.h"
+	"GLES2Render/GLES2Framebuffer.h"
+	"GLES2Render/GLES2StencilFunctions.h"
+	"GLES2Render/GLES2Textures.h"
+	"GLES2Render/GLES2Attributes.h"
+	"GLES2Render/GLES2Renderer.h"
+	"GLES2Render/GLES2Render.h"
+	"GLES2Render/GLES2ShaderProgram.h"
+
+1789286617 c:\developmentfiles\alphalabsengine\engine\src\main\main.h
+	"../../../Clients/Shells/Win32/GameShell.h"
+	"../GLES2Includes.h"
+	"File/File.h"
+
+1789286662 c:\developmentfiles\alphalabsengine\engine\src\necessity.h
+	<cmath>
+	<string>
+	<cstdio>
+	<cstdint>
+
+1789290159 source:c:\developmentfiles\alphalabsengine\engine\src\main\image\codec.cpp
+	"Codec.h"
+
+1789290324 source:c:\developmentfiles\alphalabsengine\engine\src\main\image\format.cpp
+	"Format.h"
+
+1789290925 source:c:\developmentfiles\alphalabsengine\engine\src\main\image\imgdata.cpp
+	"ImgData.h"
+	<FreeImage.h>
+
+1789291046 c:\developmentfiles\alphalabsengine\engine\src\main\image\imgdata.h
+	"../../GLES2Includes.h"
+	"../File/File.h"
+	"../../Necessity.h"
+	<FreeImage.h>
+
+1789290162 c:\developmentfiles\alphalabsengine\engine\src\main\image\codec.h
+	"../../Necessity.h"
+
+1789290307 c:\developmentfiles\alphalabsengine\engine\src\main\image\format.h
+	"../../Necessity.h"
+	<FreeImage.h>
+
+1789291776 source:c:\developmentfiles\alphalabsengine\engine\src\main\image\imgdecode.cpp
+	"ImgDecode.h"
+
+1789291490 c:\developmentfiles\alphalabsengine\engine\src\main\image\imgdecode.h
+	"ImgData.h"
+	<FreeImage.h>
+	<vector>
+

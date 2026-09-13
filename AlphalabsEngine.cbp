@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AlphalabsEngine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc-mingw32" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/AlphalabsEngine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc-mingw32" />
+				<Compiler>
+					<Add option="-D_DEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="../../MinGW/lib/libEGL.dll.a" />
+					<Add library="../../MinGW/lib/libGLESv2.dll.a" />
+					<Add library="winmm" />
+					<Add library="../../MinGW/bin/libFreeImage.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/AlphalabsEngine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc-mingw32" />
+				<Linker>
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="../../MinGW/lib/libEGL.dll.a" />
+					<Add library="../../MinGW/lib/libGLESv2.dll.a" />
+					<Add library="winmm" />
+					<Add library="../../MinGW/bin/libFreeImage.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Linker>
+			<Add option="-luser32" />
+			<Add option="-lgdi32" />
+			<Add option="-lGLESv2" />
+			<Add option="-lEGL" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="../../MinGW/lib/libEGL.dll.a" />
+			<Add library="../../MinGW/lib/libGLESv2.dll.a" />
+			<Add library="winmm" />
+			<Add library="../../MinGW/bin/libFreeImage.a" />
+		</Linker>
+		<Unit filename="Clients/Shells/Win32/GameShell.cpp" />
+		<Unit filename="Clients/Shells/Win32/GameShell.h" />
+		<Unit filename="Engine/Src/GLES2Includes.h" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Attributes.cpp" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Attributes.h" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Buffer.cpp" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Buffer.h" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Framebuffer.cpp" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Framebuffer.h" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Render.cpp" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Renderer.cpp" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Renderer.h" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2ShaderProgram.cpp" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2StencilFunctions.cpp" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2StencilFunctions.h" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Textures.cpp" />
+		<Unit filename="Engine/Src/GLES2Render/GLES2Textures.h" />
+		<Unit filename="Engine/Src/Main/File/File.cpp" />
+		<Unit filename="Engine/Src/Main/File/File.h" />
+		<Unit filename="Engine/Src/Main/Image/Codec.cpp" />
+		<Unit filename="Engine/Src/Main/Image/Codec.h" />
+		<Unit filename="Engine/Src/Main/Image/Format.cpp" />
+		<Unit filename="Engine/Src/Main/Image/ImgData.cpp" />
+		<Unit filename="Engine/Src/Main/Image/ImgData.h" />
+		<Unit filename="Engine/Src/Main/Image/ImgDecode.cpp" />
+		<Unit filename="Engine/Src/Main/Image/ImgDecode.h" />
+		<Unit filename="Engine/Src/Main/Main.h" />
+		<Unit filename="Engine/Src/Necessity.h" />
+		<Unit filename="Res/Shaders/colorWhole.ps" />
+		<Unit filename="Res/Shaders/colorWhole.vs" />
+		<Unit filename="Res/Shaders/texture.vs" />
+		<Unit filename="StartApp.cpp" />
+		<Unit filename="Test.txt" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
