@@ -15,12 +15,19 @@
 					<Add option="-D_DEBUG" />
 				</Compiler>
 				<Linker>
+					<Add option="-luser32" />
+					<Add option="-lgdi32" />
+					<Add option="-lGLESv2" />
+					<Add option="-lEGL" />
+					<Add option="-lD2D1" />
+					<Add option="-lole32" />
 					<Add library="user32" />
 					<Add library="gdi32" />
 					<Add library="../../MinGW/lib/libEGL.dll.a" />
 					<Add library="../../MinGW/lib/libGLESv2.dll.a" />
 					<Add library="winmm" />
 					<Add library="../../MinGW/bin/libFreeImage.a" />
+					<Add library="ole32" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -29,6 +36,11 @@
 				<Option type="1" />
 				<Option compiler="gcc-mingw32" />
 				<Linker>
+					<Add option="-luser32" />
+					<Add option="-lgdi32" />
+					<Add option="-lGLESv2" />
+					<Add option="-lEGL" />
+					<Add option="-lD2D1" />
 					<Add library="user32" />
 					<Add library="gdi32" />
 					<Add library="../../MinGW/lib/libEGL.dll.a" />
@@ -43,6 +55,7 @@
 			<Add option="-lgdi32" />
 			<Add option="-lGLESv2" />
 			<Add option="-lEGL" />
+			<Add option="-lD2D1" />
 			<Add library="user32" />
 			<Add library="gdi32" />
 			<Add library="../../MinGW/lib/libEGL.dll.a" />
@@ -52,6 +65,31 @@
 		</Linker>
 		<Unit filename="Clients/Shells/Win32/GameShell.cpp" />
 		<Unit filename="Clients/Shells/Win32/GameShell.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Begin.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Begin.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1ColorEffect.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1ColorEffect.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1End.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1End.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1HardwareSettings.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1HardwareSettings.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Initialise.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Initialise.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Render.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Render.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1RenderAll.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1RenderProperties.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1RenderProperties.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Resize.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Resize.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Shutdown.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Shutdown.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1State.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1State.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Texture.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Texture.h" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Transform.cpp" />
+		<Unit filename="Engine/Src/D2D1Render/D2D1Transform.h" />
 		<Unit filename="Engine/Src/GLES2Includes.h" />
 		<Unit filename="Engine/Src/GLES2Render/GLES2Attributes.cpp" />
 		<Unit filename="Engine/Src/GLES2Render/GLES2Attributes.h" />

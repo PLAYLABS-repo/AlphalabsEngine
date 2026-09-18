@@ -39,7 +39,7 @@ namespace Alphalabs
             return false;
         }
 
-        std::printf("D2D1CreateFactory succeeded\n");
+        std::printf("D2D1CreateFactory success\n");
 
         if (!D2D1RenderProperties(
             hWnd,
@@ -60,7 +60,7 @@ namespace Alphalabs
 
         D2D1IsInitialised = true;
 
-        std::printf("D2D1 initialization succeeded\n");
+        std::printf("D2D1 initialization succeess\n");
 
         return true;
     }

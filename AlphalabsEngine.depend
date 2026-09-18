@@ -1,7 +1,10 @@
 # depslib dependency file v1.0
-1789713628 source:c:\developmentfiles\alphalabsengine\startapp.cpp
+1789715528 source:c:\developmentfiles\alphalabsengine\startapp.cpp
 	<cstdio>
 	<windows.h>
+	<chrono>
+	<mmsystem.h>
+	<cmath>
 	"Clients/Shells/Win32/GameShell.h"
 	"Engine/Src/D2D1Render/D2D1RenderAll.h"
 
@@ -145,7 +148,7 @@
 1789391979 source:c:\developmentfiles\alphalabsengine\engine\src\main\math\vector.cpp
 	"Vector.h"
 
-1789713716 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1initialise.cpp
+1789714612 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1initialise.cpp
 	"D2D1Initialise.h"
 	"D2D1State.h"
 	"D2D1RenderProperties.h"
