@@ -52,6 +52,16 @@ bool Window::Init(){
    wc.hInstance = hInstance;
    wc.lpszClassName = WndClassName;
    RegisterClassW(&wc);
+    AllocConsole();
+
+    // Get the console window.
+    HWND ConsoleWindow = GetConsoleWindow();
+
+    // Show the console.
+    if (ConsoleWindow != NULL)
+    {
+        ShowWindow(ConsoleWindow, SW_SHOW);
+    }
 
    HWND hWnd = CreateWindowExW(0,
                                WndClassName,

@@ -77,6 +77,8 @@
 		<Unit filename="Engine/Src/Main/Image/ImgDecode.cpp" />
 		<Unit filename="Engine/Src/Main/Image/ImgDecode.h" />
 		<Unit filename="Engine/Src/Main/Main.h" />
+		<Unit filename="Engine/Src/Main/Math/Interp.h" />
+		<Unit filename="Engine/Src/Main/Math/Vector.cpp" />
 		<Unit filename="Engine/Src/Necessity.h" />
 		<Unit filename="Res/Shaders/colorWhole.ps" />
 		<Unit filename="Res/Shaders/colorWhole.vs" />

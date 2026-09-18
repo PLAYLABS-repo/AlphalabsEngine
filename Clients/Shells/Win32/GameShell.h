@@ -26,6 +26,7 @@ public:
     EGLDisplay display = EGL_NO_DISPLAY;
     EGLSurface surface = EGL_NO_SURFACE;
     EGLContext context = EGL_NO_CONTEXT;
+
     EGLConfig config = NULL;
     //static bool keys[256];
     bool running = false;

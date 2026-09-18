@@ -42,6 +42,7 @@ void GLES2SetBlendFunction(
     GLenum Destination
 )
 {
+    glEnable(GL_BLEND);
     // Sets the blending factors.
     glBlendFunc(Source, Destination);
 }

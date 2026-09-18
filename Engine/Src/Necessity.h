@@ -6,4 +6,6 @@
 #include <string>
 #include <cstdio>
 #include <cstdint>
+#include <d2d1.h>
+#include <windows.h>
 #endif // NECESSITY_H

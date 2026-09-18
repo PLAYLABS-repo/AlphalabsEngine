@@ -4,4 +4,5 @@
 #include "../../../Clients/Shells/Win32/GameShell.h"
 #include "../GLES2Includes.h"
 #include "File/File.h"
+#include "Math/Vector.h"
 #endif // MAIN_H
