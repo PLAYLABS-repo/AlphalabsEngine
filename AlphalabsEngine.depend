@@ -1,11 +1,8 @@
 # depslib dependency file v1.0
-1789712763 source:c:\developmentfiles\alphalabsengine\startapp.cpp
-	<iostream>
-	"Engine/Src/Main/Main.h"
-	"Engine/Src/Necessity.h"
-	<mmsystem.h>
-	"Engine/Src/Main/Image/ImgDecode.h"
-	"Engine/Src/Main/Image/ImgData.h"
+1789713628 source:c:\developmentfiles\alphalabsengine\startapp.cpp
+	<cstdio>
+	<windows.h>
+	"Clients/Shells/Win32/GameShell.h"
 	"Engine/Src/D2D1Render/D2D1RenderAll.h"
 
 1788600051 source:c:\developmentfiles\alphalabsengine\client\shells\game\gameshell.c
@@ -28,11 +25,11 @@
 1788953576 c:\developmentfiles\alphalabsengine\engine\src\gles2render\gles2renderer.h
 	<GLES2/gl2.h>
 
-1789388065 source:c:\developmentfiles\alphalabsengine\clients\shells\win32\gameshell.cpp
+1789713895 source:c:\developmentfiles\alphalabsengine\clients\shells\win32\gameshell.cpp
 	"GameShell.h"
 	<string>
 
-1789387665 c:\developmentfiles\alphalabsengine\clients\shells\win32\gameshell.h
+1789713914 c:\developmentfiles\alphalabsengine\clients\shells\win32\gameshell.h
 	<windows.h>
 	<EGL/egl.h>
 	<GLES2/gl2.h>
@@ -148,10 +145,11 @@
 1789391979 source:c:\developmentfiles\alphalabsengine\engine\src\main\math\vector.cpp
 	"Vector.h"
 
-1789713162 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1initialise.cpp
+1789713716 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1initialise.cpp
 	"D2D1Initialise.h"
 	"D2D1State.h"
 	"D2D1RenderProperties.h"
+	<cstdio>
 
 1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1initialise.h
 	<windows.h>
@@ -223,9 +221,10 @@
 1789651616 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1texture.cpp
 	"D2D1Texture.h"
 
-1789713158 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1transform.cpp
+1789713943 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1transform.cpp
 	"D2D1Transform.h"
 	"D2D1State.h"
+	<cmath>
 
 1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1transform.h
 

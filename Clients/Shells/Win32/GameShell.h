@@ -20,7 +20,7 @@ public:
     int Width = 1280;
     int Height = 720;
     bool Init();
-    HWND hWnd = NULL;
+    HWND  hWnd= hWnd;
     HDC hDc = NULL;
     HINSTANCE hInstance = GetModuleHandleW(NULL);
     EGLDisplay display = EGL_NO_DISPLAY;

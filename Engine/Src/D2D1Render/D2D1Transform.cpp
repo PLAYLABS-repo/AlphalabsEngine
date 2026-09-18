@@ -1,6 +1,8 @@
 #include "D2D1Transform.h"
 #include "D2D1State.h"
 
+#include <cmath>
+
 #ifdef _WIN32
 
 namespace Alphalabs
@@ -20,14 +22,31 @@ namespace Alphalabs
             return;
         }
 
-        D2D1_POINT_2F Origin = D2D1::Point2F(OriginX, OriginY);
+        const float Pi =
+            3.14159265358979323846f;
 
-        D2D1::Matrix3x2F Transform =
-            D2D1::Matrix3x2F::Scale(ScaleX, ScaleY, Origin) *
-            D2D1::Matrix3x2F::Rotation(Rotation, Origin) *
-            D2D1::Matrix3x2F::Translation(X, Y);
+        const float Radians =
+            Rotation * Pi / 180.0f;
 
-        D2DRenderTarget->SetTransform(Transform);
+        const float Cosine =
+            std::cos(Radians);
+
+        const float Sine =
+            std::sin(Radians);
+
+        D2D1_MATRIX_3X2_F Matrix =
+        {
+            Cosine * ScaleX,
+            Sine * ScaleX,
+            -Sine * ScaleY,
+            Cosine * ScaleY,
+            X - (OriginX * Cosine * ScaleX) + (OriginY * Sine * ScaleY),
+            Y - (OriginX * Sine * ScaleX) - (OriginY * Cosine * ScaleY)
+        };
+
+        D2DRenderTarget->SetTransform(
+            &Matrix
+        );
     }
 
     void D2D1ResetTransform()
@@ -37,8 +56,18 @@ namespace Alphalabs
             return;
         }
 
+        D2D1_MATRIX_3X2_F Matrix =
+        {
+            1.0f,
+            0.0f,
+            0.0f,
+            1.0f,
+            0.0f,
+            0.0f
+        };
+
         D2DRenderTarget->SetTransform(
-            D2D1::Matrix3x2F::Identity()
+            &Matrix
         );
     }
 }

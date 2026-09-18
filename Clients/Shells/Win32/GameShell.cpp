@@ -63,7 +63,7 @@ bool Window::Init(){
         ShowWindow(ConsoleWindow, SW_SHOW);
     }
 
-   HWND hWnd = CreateWindowExW(0,
+    hWnd = CreateWindowExW(0,
                                WndClassName,
                                WindowName,
                                WS_OVERLAPPEDWINDOW,
