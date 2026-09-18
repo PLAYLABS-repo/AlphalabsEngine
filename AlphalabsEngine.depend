@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1789715528 source:c:\developmentfiles\alphalabsengine\startapp.cpp
+1789737266 source:c:\developmentfiles\alphalabsengine\startapp.cpp
 	<cstdio>
 	<windows.h>
 	<chrono>
 	<mmsystem.h>
 	<cmath>
+	<wincodec.h>
 	"Clients/Shells/Win32/GameShell.h"
 	"Engine/Src/D2D1Render/D2D1RenderAll.h"
 
@@ -32,7 +33,7 @@
 	"GameShell.h"
 	<string>
 
-1789713914 c:\developmentfiles\alphalabsengine\clients\shells\win32\gameshell.h
+1789729661 c:\developmentfiles\alphalabsengine\clients\shells\win32\gameshell.h
 	<windows.h>
 	<EGL/egl.h>
 	<GLES2/gl2.h>
@@ -148,88 +149,88 @@
 1789391979 source:c:\developmentfiles\alphalabsengine\engine\src\main\math\vector.cpp
 	"Vector.h"
 
-1789714612 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1initialise.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1initialise.cpp
 	"D2D1Initialise.h"
 	"D2D1State.h"
 	"D2D1RenderProperties.h"
 	<cstdio>
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1initialise.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1initialise.h
 	<windows.h>
 
-1789651616 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1renderproperties.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1renderproperties.cpp
 	"D2D1RenderProperties.h"
 	"D2D1State.h"
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1renderproperties.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1renderproperties.h
 	<windows.h>
 
-1789651616 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1begin.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1begin.cpp
 	"D2D1Begin.h"
 	"D2D1State.h"
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1begin.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1begin.h
 	<d2d1.h>
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1state.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1state.h
 	<windows.h>
 	<d2d1.h>
 	<FreeImage.h>
 
-1789651616 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1coloreffect.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1coloreffect.cpp
 	"D2D1ColorEffect.h"
 	"D2D1Texture.h"
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1coloreffect.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1coloreffect.h
 	"D2D1State.h"
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1texture.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1texture.h
 	"D2D1State.h"
 
-1789651616 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1end.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1end.cpp
 	"D2D1End.h"
 	"D2D1State.h"
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1end.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1end.h
 
-1789651616 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1hardwaresettings.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1hardwaresettings.cpp
 	"D2D1HardwareSettings.h"
 	"D2D1State.h"
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1hardwaresettings.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1hardwaresettings.h
 	<d2d1.h>
 
-1789651617 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1render.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1render.cpp
 	"D2D1Render.h"
 
-1789651617 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1render.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1render.h
 	"D2D1State.h"
 
-1789651616 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1resize.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1resize.cpp
 	"D2D1Resize.h"
 	"D2D1State.h"
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1resize.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1resize.h
 	<windows.h>
 
-1789651616 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1shutdown.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1shutdown.cpp
 	"D2D1Shutdown.h"
 	"D2D1State.h"
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1shutdown.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1shutdown.h
 
-1789651616 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1state.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1state.cpp
 	"D2D1State.h"
 
-1789651616 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1texture.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1texture.cpp
 	"D2D1Texture.h"
 
-1789713943 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1transform.cpp
+1789738013 source:c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1transform.cpp
 	"D2D1Transform.h"
 	"D2D1State.h"
 	<cmath>
 
-1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1transform.h
+1789738013 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1transform.h
 
 1789651616 c:\developmentfiles\alphalabsengine\engine\src\d2d1render\d2d1renderall.h
 	"D2D1State.h"

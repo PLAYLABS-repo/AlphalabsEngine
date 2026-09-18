@@ -5,6 +5,8 @@
 #include <mmsystem.h>
 #include <cmath>
 
+#include <FreeImage.h>
+
 #include "Clients/Shells/Win32/GameShell.h"
 #include "Engine/Src/D2D1Render/D2D1RenderAll.h"
 
@@ -12,114 +14,308 @@ using namespace Alphalabs;
 
 int main()
 {
+    printf("Program started.\n");
 
+    /*
+        --------------------------------------------------
+        COM
+        --------------------------------------------------
+    */
 
+    HRESULT ComResult =
+        CoInitializeEx(
+            nullptr,
+            COINIT_APARTMENTTHREADED
+        );
 
-    auto PreviousTime =
-        std::chrono::steady_clock::now();
-    float SquareX = 100.0f;
-    float SquareY = 100.0f;
-    float Time = 0.0f;
+    if (FAILED(ComResult))
+    {
+        printf(
+            "ERROR: CoInitializeEx failed: 0x%08lX\n",
+            static_cast<unsigned long>(ComResult)
+        );
 
-    HRESULT ComResult = CoInitializeEx(
-        nullptr,
-        COINIT_APARTMENTTHREADED
-    );
+        return 1;
+    }
 
+    printf("COM initialized.\n");
+
+    /*
+        --------------------------------------------------
+        FreeImage
+        --------------------------------------------------
+    */
+
+    FreeImage_Initialise();
+
+    printf("FreeImage initialized.\n");
+
+    /*
+        --------------------------------------------------
+        Window
+        --------------------------------------------------
+    */
 
     Window GameWindow;
 
     GameWindow.Init();
 
+    printf("Window initialized.\n");
+
+    /*
+        --------------------------------------------------
+        Direct2D
+        --------------------------------------------------
+    */
 
     D2D1HardwareSettings(
         D2D1_RENDER_TARGET_TYPE_HARDWARE,
         D2D1_RENDER_TARGET_USAGE_NONE
     );
 
-    D2D1Initialise(
-        GameWindow.hWnd,
-        GameWindow.Width,
-        GameWindow.Height
+    if (!D2D1Initialise(
+            GameWindow.hWnd,
+            GameWindow.Width,
+            GameWindow.Height))
+    {
+        printf("ERROR: D2D1Initialise failed.\n");
+
+        FreeImage_DeInitialise();
+        CoUninitialize();
+
+        return 1;
+    }
+
+    printf("Direct2D initialized.\n");
+
+    /*
+        --------------------------------------------------
+        Texture
+        --------------------------------------------------
+    */
+
+    const char* ImagePath =
+        "UnitTest/Image/RGB1.png";
+
+    printf(
+        "Loading texture: %s\n",
+        ImagePath
     );
 
+    D2D1Texture Texture;
 
-    ID2D1SolidColorBrush* SquareBrush = nullptr;
-
-    D2D1_COLOR_F Red =
+    if (!D2D1CreateTexture(
+            ImagePath,
+            Texture))
     {
-        1.0f,
-        0.0f,
-        0.0f,
-        1.0f
-    };
-
-    HRESULT BrushResult =
-        D2DRenderTarget->CreateSolidColorBrush(
-            &Red,
-            nullptr,
-            &SquareBrush
+        printf(
+            "ERROR: D2D1CreateTexture failed.\n"
         );
-    mciSendStringA("open UnitTest/Sound/LoadingBG2.mp3 type MPEGVideo alias myAudio", NULL, NULL, NULL);
-    mciSendStringA("play myAudio repeat",NULL, NULL, NULL );
 
+        D2D1Shutdown();
+        FreeImage_DeInitialise();
+        CoUninitialize();
 
+        return 1;
+    }
+
+    printf(
+        "Texture loaded successfully: %ux%u\n",
+        Texture.Width,
+        Texture.Height
+    );
+
+    /*
+        --------------------------------------------------
+        Music
+        --------------------------------------------------
+    */
+
+    MCIERROR MusicResult =
+        mciSendStringA(
+            "open UnitTest/Sound/LoadingBG2.mp3 "
+            "type MPEGVideo alias myAudio",
+            nullptr,
+            0,
+            nullptr
+        );
+
+    if (MusicResult != 0)
+    {
+        printf(
+            "WARNING: Music failed to open: %u\n",
+            MusicResult
+        );
+    }
+    else
+    {
+        MCIERROR PlayResult =
+            mciSendStringA(
+                "play myAudio repeat",
+                nullptr,
+                0,
+                nullptr
+            );
+
+        if (PlayResult != 0)
+        {
+            printf(
+                "WARNING: Music failed to play: %u\n",
+                PlayResult
+            );
+        }
+    }
+
+    /*
+        --------------------------------------------------
+        Animation
+        --------------------------------------------------
+    */
+
+    auto PreviousTime =
+        std::chrono::steady_clock::now();
+
+    float SquareX = 100.0f;
+    float SquareY = 100.0f;
+    float Time = 0.0f;
+
+    /*
+        --------------------------------------------------
+        Main loop
+        --------------------------------------------------
+    */
 
     while (GameWindow.running)
     {
         GameWindow.PollEvents();
-        GameWindow.WindowName = L"testwindow";
 
         auto CurrentTime =
-        std::chrono::steady_clock::now();
+            std::chrono::steady_clock::now();
 
         std::chrono::duration<float> Delta =
-        CurrentTime - PreviousTime;
-        PreviousTime = CurrentTime;
-        float DeltaTime = Delta.count();
-        Time += DeltaTime;
-        SquareX += std::sin(4.0f * Time + 100.0f);
-        SquareY += std::cos(4.0f * Time + 100.0f);
+            CurrentTime - PreviousTime;
 
+        PreviousTime = CurrentTime;
+
+        float DeltaTime =
+            Delta.count();
+
+        if (DeltaTime > 0.1f)
+        {
+            DeltaTime = 0.1f;
+        }
+
+        Time += DeltaTime;
+
+        SquareX +=
+            std::sin(
+                4.0f * Time + 100.0f
+            ) *
+            DeltaTime *
+            100.0f;
+
+        SquareY +=
+            std::cos(
+                4.0f * Time + 100.0f
+            ) *
+            DeltaTime *
+            100.0f;
+
+        /*
+            --------------------------------------------------
+            Begin frame
+            --------------------------------------------------
+        */
 
         D2D1Begin(
             D2D1::ColorF(
                 D2D1::ColorF::Black
             )
         );
-        D2D1Transform(
+
+        /*
+            Reset transform so the texture is drawn
+            directly in window coordinates.
+        */
+
+
+
+        /*
+            --------------------------------------------------
+            Render texture
+            --------------------------------------------------
+        */
+
+        D2D1Render(
+            Texture,
             SquareX,
             SquareY,
-            0.0f,
-            1.0f,
-            1.0f,
-            0.0f,
-            0.0f
+            200.0f,
+            200.0f
         );
 
-        D2DRenderTarget->FillRectangle(
-            D2D1::RectF(
-                120.0f,
-                100.0f,
-                300.0f,
-                300.0f
-            ),
-            SquareBrush
-        );
-
+        /*
+            --------------------------------------------------
+            End frame
+            --------------------------------------------------
+        */
 
         D2D1End();
     }
 
-    if (SquareBrush)
-    {
-        SquareBrush->Release();
-        SquareBrush = nullptr;
-    }
+    /*
+        --------------------------------------------------
+        Music cleanup
+        --------------------------------------------------
+    */
+
+    mciSendStringA(
+        "stop myAudio",
+        nullptr,
+        0,
+        nullptr
+    );
+
+    mciSendStringA(
+        "close myAudio",
+        nullptr,
+        0,
+        nullptr
+    );
+
+    /*
+        --------------------------------------------------
+        Texture cleanup
+        --------------------------------------------------
+    */
+
+    D2D1ReleaseTexture(Texture);
+
+    /*
+        --------------------------------------------------
+        Direct2D cleanup
+        --------------------------------------------------
+    */
 
     D2D1Shutdown();
 
+    /*
+        --------------------------------------------------
+        FreeImage cleanup
+        --------------------------------------------------
+    */
+
+    FreeImage_DeInitialise();
+
+    /*
+        --------------------------------------------------
+        COM cleanup
+        --------------------------------------------------
+    */
+
     CoUninitialize();
+
+    printf("Program exited normally.\n");
 
     return 0;
 }
